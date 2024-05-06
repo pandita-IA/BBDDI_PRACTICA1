@@ -90,10 +90,9 @@ CREATE TABLE if not exists necesita(
 CREATE TABLE if not exists cita(
 	id_criatura integer unsigned,
     id_personal integer unsigned,
-    fecha datetime,
-    hora timestamp,
+    fecha_y_hora datetime,
     id_tratamiento integer unsigned default 0,
-    PRIMARY KEY (id_criatura, id_personal, fecha, hora, id_tratamiento),
+    PRIMARY KEY (id_criatura, id_personal, fecha_y_hora, id_tratamiento),
     
     CONSTRAINT
 		FOREIGN KEY (id_criatura)
