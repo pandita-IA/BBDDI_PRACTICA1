@@ -45,7 +45,6 @@ CREATE TABLE if not exists Ingrediente(
     nombre_ingrediente varchar(50) unique not null,
     precio integer not null,
     PRIMARY KEY(id_ingrediente)
-
 );
 
 
