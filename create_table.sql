@@ -16,7 +16,8 @@ CREATE TABLE if not exists Criatura(
 CREATE TABLE if not exists Enfermedad(
 	id_enfermedad integer unsigned auto_increment,
     nombre_enfermedad varchar(50) unique not null,
-	PRIMARY KEY (id_enfermedad)    
+	PRIMARY KEY (id_enfermedad),
+    unique(nombre_enfermedad)
 );
 
 
@@ -37,14 +38,16 @@ CREATE TABLE if not exists Tratamiento(
     nombre_tratamiento varchar(50) unique not null,
     descripcion_tratamiento varchar(100),
     id_enfermedad integer not null unique not null,
-    PRIMARY KEY(id_tratamiento)
+    PRIMARY KEY(id_tratamiento),
+    unique(nombre_tratamiento)
 );
 
 CREATE TABLE if not exists Ingrediente(
 	id_ingrediente integer unsigned auto_increment,
     nombre_ingrediente varchar(50) unique not null,
     precio integer not null,
-    PRIMARY KEY(id_ingrediente)
+    PRIMARY KEY(id_ingrediente),
+    unique(nombre_ingrediente)
 );
 
 
