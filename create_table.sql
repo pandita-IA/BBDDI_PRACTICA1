@@ -106,7 +106,14 @@ CREATE TABLE if not exists cita(
 		FOREIGN KEY (id_personal)
         REFERENCES Personal(id_personal)
         on delete restrict
-        on update cascade    
+        on update cascade,
+	
+    CONSTRAINT 
+		foreign key (id_tratamiento)
+        references Tratamiento(id_tratamiento)
+        on delete restrict
+        on update cascade
+	
 
     
 );
